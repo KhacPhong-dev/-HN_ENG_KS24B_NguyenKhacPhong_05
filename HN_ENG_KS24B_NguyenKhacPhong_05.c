@@ -6,17 +6,17 @@ int main() {
 
     do {
         printf("\n==== MENU ====\n");
-        printf("1. Nh?p s? ph?n t? v‡ gi· tr? cho m?ng\n");
-        printf("2. In gi· tr? c·c ph?n t? trong m?ng\n");
-        printf("3. –?m s? lu?ng c·c s? ho‡n h?o trong m?ng\n");
-        printf("4. TÏm gi· tr? nh? th? 2 trong m?ng\n");
-        printf("5. ThÍm ph?n t? v‡o d?u m?ng\n");
-        printf("6. XÛa ph?n t? t?i v? trÌ c? th?\n");
+        printf("1. Nh?p s? ph?n t? v√† gi√° tr? cho m?ng\n");
+        printf("2. In gi√° tr? c√°c ph?n t? trong m?ng\n");
+        printf("3. √ê?m s? lu?ng c√°c s? ho√†n h?o trong m?ng\n");
+        printf("4. T√¨m gi√° tr? nh? th? 2 trong m?ng\n");
+        printf("5. Th√™m ph?n t? v√†o d?u m?ng\n");
+        printf("6. X√≥a ph?n t? t?i v? tr√≠ c? th?\n");
         printf("7. S?p x?p m?ng gi?m d?n\n");
-        printf("8. TÏm ki?m ph?n t? trong m?ng\n");
+        printf("8. T√¨m ki?m ph?n t? trong m?ng\n");
         printf("9. S?p x?p m?ng s? l? tru?c, s? ch?n sau\n");
-        printf("10. –?o ngu?c m?ng\n");
-        printf("0. Tho·t\n");
+        printf("10. √ê?o ngu?c m?ng\n");
+        printf("11. Tho√°t\n");
         printf("L?a ch?n c?a b?n: ");
         scanf("%d", &choice);
 
@@ -40,7 +40,7 @@ int main() {
                 }
                 if (sum == arr[i] && arr[i] > 1) count++;
             }
-            printf("S? lu?ng s? ho‡n h?o trong m?ng: %d\n", count);
+            printf("S? lu?ng s? ho√†n h?o trong m?ng: %d\n", count);
         } else if (choice == 4) {
             int min = __INT_MAX__, secondMin = __INT_MAX__;
             for (int i = 0; i < n; i++) {
@@ -52,13 +52,13 @@ int main() {
                 }
             }
             if (secondMin == __INT_MAX__) {
-                printf("KhÙng cÛ gi· tr? nh? th? 2.\n");
+                printf("Kh√¥ng c√≥ gi√° tr? nh? th? 2.\n");
             } else {
-                printf("Gi· tr? nh? th? 2: %d\n", secondMin);
+                printf("Gi√° tr? nh? th? 2: %d\n", secondMin);
             }
         } else if (choice == 5) {
             int newElem;
-            printf("Nh?p gi· tr? c?n thÍm: ");
+            printf("Nh?p gi√° tr? c?n th√™m: ");
             scanf("%d", &newElem);
             for (int i = n; i > 0; i--) {
                 arr[i] = arr[i - 1];
@@ -67,10 +67,10 @@ int main() {
             n++;
         } else if (choice == 6) {
             int pos;
-            printf("Nh?p v? trÌ c?n xÛa (0-%d): ", n - 1);
+            printf("Nh?p v? tr√≠ c?n x√≥a (0-%d): ", n - 1);
             scanf("%d", &pos);
             if (pos < 0 || pos >= n) {
-                printf("V? trÌ khÙng h?p l?.\n");
+                printf("V? tr√≠ kh√¥ng h?p l?.\n");
             } else {
                 for (int i = pos; i < n - 1; i++) {
                     arr[i] = arr[i + 1];
@@ -93,7 +93,7 @@ int main() {
             }
         } else if (choice == 8) {
             int x, found = -1;
-            printf("Nh?p gi· tr? c?n tÏm: ");
+            printf("Nh?p gi√° tr? c?n t√¨m: ");
             scanf("%d", &x);
             for (int i = 0; i < n; i++) {
                 if (arr[i] == x) {
@@ -102,9 +102,9 @@ int main() {
                 }
             }
             if (found != -1) {
-                printf("Gi· tr? %d tÏm th?y t?i v? trÌ %d.\n", x, found);
+                printf("Gi√° tr? %d t√¨m th?y t?i v? tr√≠ %d.\n", x, found);
             } else {
-                printf("KhÙng tÏm th?y gi· tr? %d trong m?ng.\n", x);
+                printf("Kh√¥ng t√¨m th?y gi√° tr? %d trong m?ng.\n", x);
             }
         } else if (choice == 9) {
             int temp[MAX], index = 0;
@@ -131,10 +131,10 @@ int main() {
             for (int i = 0; i < n; i++) {
                 printf("arr[%d] = %d\n", i, arr[i]);
             }
-        } else if (choice == 0) {
-            printf("Tho·t chuong trÏnh.\n");
+        } else if (choice == 11) {
+            printf("Tho√°t chuong tr√¨nh.\n");
         } else {
-            printf("L?a ch?n khÙng h?p l?. Vui lÚng th? l?i.\n");
+            printf("L?a ch?n kh√¥ng h?p l?. Vui l√≤ng th? l?i.\n");
         }
     } while (choice != 0);
 
